@@ -8,17 +8,6 @@
     "urls": [
       "https://huggingface.co/dagbs/deepseek-coder-7b-base-v1.5-GGUF/resolve/main/deepseek-coder-7b-base-v1.5.Q8_0.gguf"
     ],
-    "sha256": "a2f82242ac5e465037cbf1ed754f04f0be044ee196e1589905f9e4dcd0e6559d"
-  },
-  {
-    "name": "EvolveSeeker-1.3B",
-    "license_name": "Deepseek License",
-    "license_url": "https://github.com/deepseek-ai/deepseek-coder/blob/main/LICENSE-MODEL",
-    "chat_template": "<｜begin▁of▁sentence｜>{%- set found_item = false -%}\n{%- for message in messages -%}\n    {%- if message['role'] == 'system' -%}\n        {%- set found_item = true -%}\n    {%- endif -%}\n{%- endfor -%}\n{%- if not found_item -%}\n{{'You are an AI programming assistant, utilizing the Deepseek Coder model, developed by Deepseek Company, and you only answer questions related to computer science. For politically sensitive questions, security and privacy issues, and other non-computer science questions, you will refuse to answer.\\n'}}\n{%- endif %}\n{%- for message in messages %}\n    {%- if message['role'] == 'system' %}\n{{ message['content'] }}\n    {%- else %}\n        {%- if message['role'] == 'user' %}\n{{'### Instruction:\\n' + message['content'] + '\\n'}}\n        {%- else %}\n{{'### Response:\\n' + message['content'] + '\\n<|EOT|>\\n'}}\n        {%- endif %}\n    {%- endif %}\n{%- endfor %}\n{{'### Response:\\n'}}\n",
-    "provider_url": "https://huggingface.co/TokenBender/evolvedSeeker_1_3",
-    "urls": [
-      "https://huggingface.co/huodon/gguf-models/resolve/main/evolve-seeker_1_3.gguf"
-    ],
-    "sha256": "0b579e114ed1f9b6354fa8fe44e38a5a429abc7e38d05fc3a436c753efc6eb24"
+    "sha256": "8fd1fb1e096b67c386111c782ea5f7100f120f14e1b14c77922930605f2dc288"
   }
 ]
